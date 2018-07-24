@@ -209,13 +209,9 @@ $(document).on('click', 'input[name="packaging"]', function(){
         $(this).closest('.grid-container3').find('.hidepunched').removeClass( 'hidepunched' )
         $(this).closest('.grid-container3').find('.hideunpunched').removeClass( 'hideunpunched' )
         $(this).closest('.grid-container3').find('.field20').css({"grid-area": "5 / 4 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field20').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field21').css({"grid-area": "5 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field21').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field16').css({"grid-area": "6 / 4 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field16').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field17').css({"grid-area": "6 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field17').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field12').empty();
     }
 });
@@ -224,16 +220,12 @@ $(document).on('click', 'input[name="accessories"]', function(){
     if($(this).val() == 'complete'){
         $(this).closest('.grid-container3').find('.save').removeClass( 'save' )
         $(this).closest('.grid-container3').find('.field25').css({"grid-area": "6 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field25').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field21').css({"grid-area": "7 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field21').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field17').empty();
     }else{
         $(this).closest('.grid-container3').find('.save').removeClass( 'save' )
         $(this).closest('.grid-container3').find('.field25').css({"grid-area": "6 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field25').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field21').css({"grid-area": "7 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field21').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field16').empty();
     }
 });
@@ -242,16 +234,12 @@ $(document).on('click', 'input[name="hanger"]', function(){
     if($(this).val() == 'punched'){
         $(this).closest('.grid-container3').find('.save').removeClass( 'save' )
         $(this).closest('.grid-container3').find('.field25').css({"grid-area": "6 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field25').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field17').css({"grid-area": "7 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field17').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field21').empty();
     }else{
         $(this).closest('.grid-container3').find('.save').removeClass( 'save' )
         $(this).closest('.grid-container3').find('.field25').css({"grid-area": "6 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field25').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field17').css({"grid-area": "7 / 5 / span 1 / span 1"})
-        $(this).closest('.grid-container3').find('.field17').css({"background-color": "#f5f5f5"})
         $(this).closest('.grid-container3').find('.field20').empty();
         
     }
