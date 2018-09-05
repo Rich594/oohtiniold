@@ -1,3 +1,7 @@
+<?php
+$pagename = (isset($_GET['pagename']) ? $_GET['pagename'] : null);
+?>
+
 <html>
     
         <title>oohtini</title>
@@ -14,7 +18,7 @@
                     <div><?php include 'mainleft.php'?></div>
 
                       <div>
-                          <?php include 'series.php'?>
+                          <?php include "$pagename.php"?>
                       </div>
 
                     <div><?php include 'mainright.php'?></div>
@@ -24,3 +28,4 @@
             </body>
 
 </html>
+

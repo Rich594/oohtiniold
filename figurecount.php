@@ -1,11 +1,14 @@
 <?php
-
+    session_start();
     require_once 'dbconnection.php';
-                
-    $result1 = mysqli_query($link, "SELECT user FROM masterlist WHERE user='Bob' and ownorwant='own'");
-    $num_rows = mysqli_num_rows($result1);
+    
+    $user = $_SESSION['user_id'];
+      
+    
+    $result1 = mysqli_query($link, "SELECT masterlist.user,count(*) FROM masterlist WHERE masterlist.user='$user'");
+    $row = mysqli_fetch_row($result1);
+    $figuresOwned= $row[1];
 
-    echo "$num_rows FIGURES OWNED\n";
- 
+    echo "$figuresOwned FIGURES OWNED\n";
 ?>
 

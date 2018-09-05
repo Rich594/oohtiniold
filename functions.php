@@ -1,20 +1,25 @@
 <?php
-function pagination($query,$per_page=10,$page=1,$url='?series=$seriesname&ownorwant=$ownorwant'){   
+
+function pagination($query,$per_page=10,$page=1,$url='?'){   
     global $link; 
     $ownorwant = (isset($_GET['ownorwant']) ? $_GET['ownorwant'] : null);
     $seriesname = (isset($_GET['series']) ? $_GET['series'] : null);
-   
-     if(empty($seriesname)){
-        $where = "ownorwant = '$ownorwant'";
-        
-        } else if(empty($ownorwant)) {
-            $where = "series = '$seriesname'";
-            
+    $user = (isset($_GET['user']) ? $_GET['user'] : null);
+  
+    $host = $_SERVER['SERVER_NAME']  . $_SERVER['REQUEST_URI'];
+    
+    $word = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+    
+    if ($word == "masterlistview") {
+        if ($ownorwant == 'All'){
+               $where = "user = '$user' AND series = '$seriesname'";
         } else {
-            
-            $where = "ownorwant = '$ownorwant' AND series = '$seriesname'";
+               $where = "ownorwant = '$ownorwant' AND user = '$user' AND series = '$seriesname'";
         }
-   
+    } else if ($word == "figureview"){
+        $where = "series = '$seriesname'";
+    }
+    
     $query = "SELECT COUNT(*) as `num` FROM {$query} WHERE $where";
     $row = mysqli_fetch_array(mysqli_query($link,$query));
     $total = $row['num'];

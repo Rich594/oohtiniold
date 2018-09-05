@@ -20,42 +20,15 @@
             
              echo   "<div class='wrapper'>
                         <div class='leftmaingrid'>
-                            
                             <div class='figure'>$figurename</div>
                             <div class='series'>$seriesname</div>   
                         </div>
                     </div>";
     }
     
-    echo "<br><div class='leftTitle'>Most Popular Figures</div>";
+     echo "<br><div class='leftTitle'>Most Figures Owned</div>";
     
-    $query2 = "SELECT actionfigures.figurename,count(*)FROM masterlist
-    INNER JOIN actionfigures ON masterlist.figurepidm = actionfigures.figurepidm
-    GROUP BY actionfigures.figurename ORDER BY COUNT(*) DESC LIMIT 5";
-    $result2 = $link->query($query2);
-    if (!$result2) die($link->error);
-    
-    $rows = $result2->num_rows;
-    
-    for ($j = 0 ; $j < $rows ; ++$j) {
-        
-            $result2->data_seek($j);
-            $row = $result2->fetch_array(MYSQLI_ASSOC);
-       
-            $actionfigure = $row['figurename'];
-            $count = $row['count(*)'];
-            
-             echo   "<div class='wrapper'>
-                        <div class='leftmaingrid'>
-                            
-                            <div class='figure'>$count - $actionfigure</div>   
-                        </div>
-                    </div>";
-    }
-
-echo "<br><div class='leftTitle'>Most Figures Owned</div>";
-    
-    $query3 = "SELECT user,count(*)FROM masterlist GROUP BY user ORDER BY COUNT(*) DESC LIMIT 5";
+    $query3 = "SELECT masterlist.user,count(*), users.first_name FROM masterlist INNER JOIN users ON masterlist.user = users.user_id WHERE ownorwant = 'own' GROUP BY user ORDER BY COUNT(*) DESC LIMIT 5";
     $result3 = $link->query($query3);
     if (!$result3) die($link->error);
     
@@ -66,7 +39,7 @@ echo "<br><div class='leftTitle'>Most Figures Owned</div>";
             $result3->data_seek($j);
             $row = $result3->fetch_array(MYSQLI_ASSOC);
        
-            $user = $row['user'];
+            $user = $row['first_name'];
             $count = $row['count(*)'];
             
              echo   "<div class='wrapper'>
@@ -76,6 +49,10 @@ echo "<br><div class='leftTitle'>Most Figures Owned</div>";
                         </div>
                     </div>";
     }
+    
+    
+  
+
 
     
 ?>
