@@ -103,7 +103,7 @@
     } 
 
     $code = $row['code'];
-
+    
     echo   "<div class='grid-container1'>
             <div class='header2'>Figure Name</div>
             <div class='header2'>Ref.</div>
@@ -120,17 +120,7 @@
 
         $figurepidm = $row[0]; 
     
-    $query = "SELECT * FROM variations WHERE reference = '$row[2]'";
-    $result2 = $link->query($query);
-    if (!$result2) die($link->error);
-
-    for ($j = 0 ; $j < $rows ; ++$j) {
-        
-            $result2->data_seek($j);
-            $row2 = $result2->fetch_array(MYSQLI_ASSOC);
-    } 
-   
-    echo    "<form action='figureview.php?series=$seriesname' method='post'>";
+    echo   "<form action='figureview.php?series=$seriesname' method='post'>";
 
     echo   "<div class='grid-container2'>
                     <div class='header1'>$row[1]</div>
