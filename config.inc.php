@@ -12,7 +12,7 @@ define('LIVE', FALSE);
 // Admin contact address:
 define('EMAIL', 'r.anderson594@yahoo.co.uk');
 // Site URL (base for all redirections):
-define('BASE_URL', 'http://localhost/oohtinitest/');
+define('BASE_URL', 'http://localhost/oohtinitest/');//LIVE: http://www.oohtini.co.uk/
 // Location of the MySQL connection script:
 define('MYSQL', 'dbconnection.php');
 // Adjust the time zone for PHP 5.1 and greater:

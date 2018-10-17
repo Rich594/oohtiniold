@@ -11,9 +11,9 @@
        echo '<div>';  
 
             echo    "<div class='infogrid'>
-            <div class='info1'>Click on a box below to view the action figures and their variations for that series.</div>
-            <div class='info2'>You can add new figures to your personal masterlist by selecting an individual action figure.</div>
-            <div class='info3'>View and update your collection by clicking on the My Collection link above.</div>
+            <div class='info1'>Click on a box below to view your action figures for that series.</div>
+            <div class='info2'>Change the ownership of a figure to either Owned or Wanted.</div>
+            <div class='info3'>Delete figures from your collection that you no longer own.</div>
             </div>"; 
         
     $user = ($_SESSION['user_id']);
@@ -41,7 +41,7 @@
             $num_rows = mysqli_num_rows($result5);
             $figures= $num_rows;
             
-            $result6 = mysqli_query($link, "SELECT SUM(variation)FROM allfigures WHERE series='$seriesname'");
+            $result6 = mysqli_query($link, "SELECT COUNT(reference)FROM linkedvariation WHERE series='$seriesname' GROUP BY 'reference'");
             $row = mysqli_fetch_row($result6);
             $variations= $row[0];
                         

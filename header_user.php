@@ -76,8 +76,8 @@ require_once 'dbconnection.php';
                                     <input type="submit" name="submit" value="Login"></div>
                                 </form>
                                 <div class="loginfield3"></div>
-                                    <div class="loginfield1"><a href="forgot_password.php" title="Password Retrieval">Forgotten Password</a></div>
-                                    <div class="loginfield2"><a href="register.php" title="Register for the Site">Register</a></div>
+                                    <div class="loginfield1"><a href="forgot_password.php" title="Password Retrieval"></a></div>
+                                    <div class="loginfield2"><a href="register.php" title="Register for the Site"></a></div>
                                 
                             </div>
                         </div>

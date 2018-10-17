@@ -189,27 +189,27 @@
             <div class='grid-container3'>
                         <div class='field1'><img class='figureImage' src='images/$figurepidm.jpg'></div>
                         <div class='field2 info'>Packaging:</div>
-                        <div class='field3'>$row[5]</div>
+                        <div class='field3 data'>$row[5]</div>
                         <div class='field4 info'>Variation:</div>
-                        <div class='field5 info'></div>
+                        <div class='field5 data'></div>
                         <div class='field6 info'>Accessory:</div>
-                        <div class='field7'>$row[6]</div>
+                        <div class='field7 data'>$row[6]</div>
                         <div class='field8 info'>oohtini Reference:</div>
-                        <div class='field9'></div>
+                        <div class='field9 data'></div>
                         <div class='field10 info'>Hanger:</div>
-                        <div class='field11'>$row[7]</div>
+                        <div class='field11 data'>$row[7]</div>
                         <div class='field12 info'>Card:</div>
-                        <div class='field13'></div>
+                        <div class='field13 data'></div>
                         <div class='field14 info'></div>
-                        <div class='field15'></div>
+                        <div class='field15 data'></div>
                         <div class='field16 info'>Bubble:</div>
-                        <div class='field17'></div>
+                        <div class='field17 data'></div>
                         <div class='field18 info'></div>
-                        <div class='field19'></div>
+                        <div class='field19 data'></div>
                         <div class='field20 info'>Sticker:</div>
-                        <div class='field21'></div>
+                        <div class='field21 data'></div>
                         <div class='field22 info'></div>
-                        <div class='field23'></div>";
+                        <div class='field23 data'></div>";
 ?>
 <?php
                 if ($row[8] == "Own"){

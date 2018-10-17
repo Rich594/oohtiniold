@@ -45,7 +45,8 @@
                 grid-template-columns: 170px 110px auto auto auto auto auto 170px 90px;
                 padding: 2 2 2 2;
                 margin: 0 auto;
-                background: white;
+                background: rgb(201,201,201);
+                background: linear-gradient(180deg, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 59%);
               }
            
             .headergrid>div {
@@ -128,19 +129,19 @@
            
             .infogrid>div {
                 padding: 10px;
-                color: black;
+                color: darkred;
                 font-size: 13px;
                 margin: 5px;
                 text-align: left;
                 font-family: 'Raleway', sans-serif;
-                font-weight: normal;
+                font-weight: bold;
                 position: relative;
                 left:5px;
                 -webkit-box-shadow: 0 8px 6px -6px black;
                 -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 10px 6px -6px gray;
                 border-radius: 2px;
-                background: linear-gradient(whitesmoke, gainsboro);
+                background: whitesmoke;
             }
             
             .datagrid {
@@ -149,10 +150,10 @@
                 grid-template-columns: 240px 240px 240px;
                 margin: 0 auto;
                 margin-bottom: 8px;
-                background: white;
                 grid-gap: 5px;
                 position: relative;
                 left: 5px;
+               
             }
            
             .datagrid>div {
@@ -169,8 +170,8 @@
                 -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 10px 6px -6px gray;
                 border-radius: 2px;
-                background: rgb(245,245,245);
-                background: linear-gradient(100deg, rgba(245,245,245,1) 13%, rgba(241,242,206,1) 86%, rgba(245,245,245,1) 97%);
+                 background: whitesmoke;
+                
             }
             
             .datagridnumber {
@@ -241,7 +242,7 @@
             }
         
             a.links:hover {
-                background-color: whitesmoke;
+                background-color: white;
                 color: darkred  !important;
             }
             
@@ -477,24 +478,56 @@
             .grid-container3 {
                 display: grid;
                 width: 874px;
-                grid-template-columns: 160px 140px 200px 170px;
+                grid-template-columns: 160px 140px 200px 180px 180px;
                 margin: 0 auto;
                 grid-gap: 3px;
                 border-radius: 10px;
+                position: relative;
             }
-           
+            
             .grid-container3>div {
                 font-family: arial;
-                font-size: 14px;
-                padding:10px 10px;
+                font-size: 12px;
                 text-align: left;
                 border-radius: 10px;
-                border: 1px solid black;
+            }
+            
+            .info {
+                color: black;
+                font-weight: normal;
+                background-color: lightblue;
+                height: 24px;
+                padding-top:8px;
+                padding-left:8px;
+            }
+            
+            .data {
+                color: black;
+                font-weight: bold;
+                background-color: whitesmoke;
+                height: 24px;
+                padding-top:8px;
+                padding-left:8px;
+            }
+            
+            .selection {
+                color: black;
+                font-weight: normal;
+                background-color: cornsilk;
+                height: 24px;
+                padding-top:8px;
+                padding-left:8px;
+            }
+            
+            .figureImage {
+                padding-left: 10px;
+                pading-top: 4px;
+              
             }
             
             .grid-container4 {
                 display: grid;
-                grid-template-columns: 170px 170px;
+                grid-template-columns: 150px 150px;
                 margin: 0 auto;
                 grid-gap: 3px;
                 border-radius: 10px;
@@ -509,7 +542,41 @@
                 border-radius: 10px;
                 border: 1px solid black;
             }
+            
+            .grid-container5 {
+                display: grid;
+                width: 774px;
+                grid-template-columns: 500px auto;
+                background-color: lightgoldenrodyellow;
+                padding: 2 2 2 2;
+                margin: 0 auto;
+                margin-top: 7px;
+                margin-bottom: 7px;
+                grid-gap: 1px;
+                border-radius: 10px;
+                border: 1px solid black;
+                position: relative;
+                left: 50px;
+                
+            }
            
+            .grid-container5>div {
+                font-family: arial;
+                font-size: 14px;
+                padding:10px 10px;
+                cursor: pointer;
+                font-weight: bold;
+                color: black;
+            }
+            
+            .headervar1 {
+                text-align: left;
+            }
+            
+            .headervar2 {
+                text-align: right;
+            }
+            
             .wrapper {
                 margin-top: 5px;
             }
@@ -520,6 +587,8 @@
             
             .field1 {
                 grid-area: 2 / 1 / span 6 / span 1;
+                padding-top: 8px;
+                padding-left: 4px;
             }         
            
             .field2 {
@@ -559,15 +628,15 @@
             }
            
             .field11 {
-                grid-area: 4 / 3 / span 1 / span 1;
+                grid-area: 4 / 3;
             }
            
             .field12 {
-                grid-area: 4 / 4 / span 1 / span 1;
+                grid-area: 4 / 4;
             }
            
             .field13 {
-                grid-area: 4 / 5 / span 1 / span 1;
+                grid-area: 4 / 5;
             }
            
             .field14 {
@@ -626,59 +695,6 @@
                 grid-area: 2 / 4 / span 6 / span 2;
             }
             
-            .place {
-                position: relative;
-                top: -5px;
-            }
-            
-            .block1 {
-                grid-area: 1 / 1 ;
-            }
-            
-            .block2 {
-                grid-area: 1 / 2 ;
-            }
-            
-            .block3 {
-                grid-area: 2 / 1 ;
-            }
-            
-            .block4 {
-                grid-area: 2 / 2 ;
-            }
-            
-            .block5 {
-                grid-area: 3 / 1 ;
-            }
-            
-            .block6 {
-                grid-area: 3 / 2 ;
-            }
-            
-            .block7 {
-                grid-area: 4 / 1 ;
-            }
-            
-            .block8 {
-                grid-area: 4 / 2 ;
-            }
-            
-            .block9 {
-                grid-area: 5 / 1 ;
-            }
-            
-            .block10 {
-                grid-area: 5 / 2 ;
-            }
-            
-            .block11 {
-                grid-area: 6 / 1 ;
-            }
-            
-            .block12 {
-                grid-area: 6 / 2 ;
-            }
-            
             .hidecarded {
                 display: none;
             }
@@ -697,20 +713,19 @@
            
             .hidepunched {
                 display: none;
+                grid-area: 4 / 4;
             }
            
             .hideunpunched {
                 display: none;
+                grid-area: 4 / 4;
             }
            
             .save {
                 display: none;
             }
            
-            .info {
-                color: black;
-                font-weight: normal;
-            }
+          
             
             .figureData {
                 color: darkred;
@@ -739,8 +754,7 @@
                 margin-top: 4px;
                 font-family: 'Raleway', sans-serif;
                 font-weight: bold;
-                background: rgb(245,245,245);
-                background: linear-gradient(100deg, rgba(245,245,245,1) 13%, rgba(241,242,206,1) 86%, rgba(245,245,245,1) 97%);
+                background-color: whitesmoke;
             }
             
             .projectbox {
@@ -802,15 +816,14 @@
                 background-color: red !important;
                 font-weight: bold;
                 position: relative;
-                top: 7px;
+                top: 10px;
             }
             
             .savebutton {
                 background-color: #239139 !important;
                 font-weight: bold;
                 position: relative;
-                top: 7px;
-                left: 100px;
+                top: 10px;
             }
             
             .noborder {
@@ -895,8 +908,4 @@
                 font-weight: bold;
             }
             
-            .figureImage {
-                padding: 2px;
-                position: relative;
-                top: 15px;
-            }
+        

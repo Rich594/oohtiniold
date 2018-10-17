@@ -4,16 +4,16 @@
     if (isset($_SESSION['user_id'])) {
             
         echo    "<div class='infogrid'>
-                <div class='info1'>Click on a box below to view the action figures and their variations for that series.</div>
-                <div class='info2'>You can add new figures to your personal masterlist by selecting an individual action figure.</div>
-                <div class='info3'>View and update your collection by clicking on the My Collection link above.</div>
+                <div class='info1'>Click on a box below to view the action figures for that series.</div>
+                <div class='info2'>Add figures to your collection by selecting an action figure.</div>
+                <div class='info3'>View your collection by clicking the My Collection link above.</div>
                 </div>"; }
             
     else    { 
         echo   "<div class='infogrid'>
-                <div class='info1'>Oohtini is a reference site that lists Star Wars action figures and their variations.</div>
-                <div class='info2'>Click on a box below to view the action figures and their variations for that series.</div>
-                <div class='info3'>For registered users, you can create a personal masterlist of the action figures you own.</div>
+                <div class='info1'>Oohtini is a reference site that lists Star Wars action figures.</div>
+                <div class='info2'>Click on a box below to view the action figures for that series.</div>
+                <div class='info3'>Registered users can create their own action figure masterlist.</div>
                 </div>";
             }    
     
@@ -41,7 +41,7 @@
             $num_rows = mysqli_num_rows($result5);
             $figures= $num_rows;
             
-            $result6 = mysqli_query($link, "SELECT SUM(variation)FROM allfigures WHERE series='$seriesname'");
+            $result6 = mysqli_query($link, "SELECT COUNT(reference)FROM actionfigures WHERE series='$seriesname'");
             $row = mysqli_fetch_row($result6);
             $variations= $row[0];
             
@@ -80,7 +80,7 @@
             $num_rows = mysqli_num_rows($result5);
             $figures= $num_rows;
             
-            $result6 = mysqli_query($link, "SELECT SUM(variation)FROM allfigures WHERE series='$seriesname'");
+            $result6 = mysqli_query($link, "SELECT COUNT(reference)FROM actionfigures WHERE series='$seriesname'");
             $row = mysqli_fetch_row($result6);
             $variations= $row[0];
             
