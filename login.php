@@ -2,7 +2,7 @@
 // This is the login page for the site.
 require('config.inc.php');
 $page_title = 'Login';
-include('header_user.php');
+include('header_user_test.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require(MYSQL);
 	// Validate the email address:
@@ -52,11 +52,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } // End of SUBMIT conditional.
 ?>
 
-<form action="login.php" method="post">
-        <input type="email" name="email" size="10" maxlength="60"><br>
-	<input type="password" name="pass" size="10">
-	<input type="submit" name="submit" value="Login">
-</form>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Login</h3>
+                    <form action="login.php" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="pass" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" name="submit" value="Login" />
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="ForgetPwd">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
 
 
 

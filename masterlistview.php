@@ -32,12 +32,6 @@
             $total = round($total,0);
     
             }
-    
-    echo   "<div class='datagrid'>
-            <div class='info1'>$seriesname</div>
-            <div class='info2'>Own <span class='datagridnumber'>$own</span> - <span class='datagridnumber'>$want</span> Want</div>
-            <div class='info3'><span class='datagridnumber'>$total%</span> Complete</div>
-            </div>"; 
       
     echo   '<div class="topbar">';   
     
@@ -114,11 +108,18 @@
 
     $results = mysqli_query($link,"SELECT masterlist.figurepidm, masterlist.ref, masterlist.reference, masterlist.series, actionfigures.figurename, masterlist.packaging, masterlist.accessories, masterlist.hanger, masterlist.ownorwant FROM {$statement} INNER JOIN actionfigures ON masterlist.figurepidm = actionfigures.figurepidm WHERE $where ORDER BY masterlist.reference LIMIT {$startpoint} , {$per_page} ");
 
-    echo pagination($statement,$per_page,$page,$url='?ownorwant='.$ownorwant.'&series='.$seriesname.'&user='.$user.'&');
+    //echo pagination($statement,$per_page,$page,$url='?ownorwant='.$ownorwant.'&series='.$seriesname.'&user='.$user.'&');
 
     echo '</div>';
     echo '</div>';
 
+       echo   "<div class='datagrid'>
+            <div class='info1'>$seriesname</div>
+            <div class='info2'>Own <span class='datagridnumber'>$own</span> - <span class='datagridnumber'>$want</span> Want</div>
+            <div class='info3'><span class='datagridnumber'>$total%</span> Complete</div>
+            </div>"; 
+    
+    
         if(isset($_POST['Want'])){
              echo "<meta http-equiv='refresh' content='0'>";
              $ref = get_post($link, 'ref');
@@ -235,7 +236,10 @@ function get_post($link, $var)
 {
     return $link->real_escape_string($_POST[$var]);
 }
-  
+ 
+echo"<br>";
+echo pagination($statement,$per_page,$page,$url='?ownorwant='.$ownorwant.'&series='.$seriesname.'&user='.$user.'&'); 
+
 ?>
 </div>
                     

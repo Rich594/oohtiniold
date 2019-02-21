@@ -2,7 +2,7 @@
 // This is the registration page for the site.
 require('config.inc.php');
 $page_title = 'Register';
-include('header_user.php');
+include('header_user_test.php');
 
 
 
@@ -73,45 +73,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 } // End of the main Submit conditional.
 ?>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Register</h3>
+                    <form action="register.php" method="post">
+                       
+                    	<div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="User Name" size="30" maxlength="10" value="<?php if (isset($trimmed['username'])) echo $trimmed['username']; ?>"> <small>(maximum 10 characters long)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="first_name" placeholder="First Name" size="30" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>">
+                        </div>
+
+                         <div class="form-group">
+                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" size="30" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>">
+                        </div>
+
+						<div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address" size="30" maxlength="60" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password1" placeholder="Password" size="30" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>"> <small>(at least 10 characters long)</small>
+                        </div>
+
+ 						<div class="form-group">
+                            <input type="password" class="form-control" name="password2" placeholder="Confirm Password" size="30" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btnSubmit" name="submit" value="Register" />
+                        </div>
+                        
+                    </form>
+                </div>
+                
+            </div>
+        </div>
 
 
 
-
-<div class="bodygrid">
-
-    <div><?php include 'mainleft.php'?></div>
-
-
-<form action="register.php" method="post">
-	
-    <table class="register">
-        <th class="registerHeader">Register</th>
-	<tr>
-            <td>First Name:</td> 
-            <td><input type="text" name="first_name" size="30" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>"></td>
-        </tr>
-        <tr>
-            <td>Last Name:</td>
-            <td><input type="text" name="last_name" size="30" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>"></td>
-        </tr>
-        <tr>
-            <td>Email Address:</td> 
-            <td><input type="email" name="email" size="30" maxlength="60" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>"></td>
-        </tr>
-        <tr>
-            <td>Password:</td>  
-            <td><input type="password" name="password1" size="30" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>"> <small>(at least 10 characters long)</small></td> 
-        </tr>
-        <tr>
-            <td>Confirm Password:</td>
-            <td><input type="password" name="password2" size="30" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>"></td>
-	</tr>
-        <tr>
-            <td><input type="submit" name="submit" value="Register"></td>
-        </tr>
-    </table>
-</form>
-
-
-<div><?php include 'mainright.php'?></div>
 </div>

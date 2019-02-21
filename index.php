@@ -5,7 +5,7 @@ require('config.inc.php');
 
 // Set the page title and include the HTML header:
 $page_title = 'Welcome to this Site!';
-include'header_user.php';
+include'header_user_test.php';
 include'home.html'; 
 ?>
 

@@ -2,7 +2,7 @@
 
     require_once 'dbconnection.php';
     
-    echo "<div class='leftTitle'>Most Popular Figures</div>";
+    echo "<div class='leftTitle'>Commonest Figures</div>";
     
     $query2 = "SELECT actionfigures.figurename,count(*)FROM masterlist
     INNER JOIN actionfigures ON masterlist.figurepidm = actionfigures.figurepidm
@@ -23,7 +23,7 @@
              echo   "<div class='wrapper'>
                         <div class='leftmaingrid'>
                             
-                            <div class='figure'>$count - $actionfigure</div>   
+                            <div class='figure'>$count - <span class='series'>$actionfigure</span></div>   
                         </div>
                     </div>";
     }
@@ -57,7 +57,7 @@
              echo   "<div class='wrapper'>
                         <div class='leftmaingrid'>
                             
-                            <div class='figure'>$count - $actionfigure</div>   
+                            <div class='figure'>$count - <span class='series'>$actionfigure</span></div>   
                         </div>
                     </div>";
     }

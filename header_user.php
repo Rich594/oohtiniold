@@ -20,6 +20,8 @@ require_once 'dbconnection.php';
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Averia+Libre" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
         <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -51,9 +53,6 @@ require_once 'dbconnection.php';
         $row = mysqli_fetch_row($result2);
         $figuresWanted= $row[1];
 
-    	//echo "<div class='headerLabel'>FIGURES OWNED: $figuresOwned FIGURES WANTED: $figuresWanted</div>";
-        
-        
         echo "<div class='headerLabel1'>USER: {$_SESSION['first_name']}<br> FIGURES OWNED:<span class='headerLabel1color'> $figuresOwned</span><br>FIGURES WANTED:<span class='headerLabel1color'> $figuresWanted</span></div>";
         echo '<div><a href="logout.php" class="button">Log Out</a></div></div>';
 }
@@ -67,7 +66,7 @@ require_once 'dbconnection.php';
          
             
             } else { //  Not logged in.
-            echo    '   <div class="headergrid2">
+                echo    '   <div class="headergrid2">
                            
                             <div class="loginfield">
                                 <form action="login.php" method="post">
@@ -77,7 +76,7 @@ require_once 'dbconnection.php';
                                 </form>
                                 <div class="loginfield3"></div>
                                     <div class="loginfield1"><a href="forgot_password.php" title="Password Retrieval"></a></div>
-                                    <div class="loginfield2"><a href="register.php" title="Register for the Site"></a></div>
+                                    <div class="loginfield2"><a href="register.php" title="Register for the Site">Register</a></div>
                                 
                             </div>
                         </div>

@@ -45,7 +45,7 @@
              echo   "<div class='wrapper'>
                         <div class='leftmaingrid'>
                             
-                            <div class='figure'>$count - $user</div>   
+                            <div class='figure'>$count - <span class='series'>$user</span></div>   
                         </div>
                     </div>";
     }
